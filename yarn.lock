@@ -105,7 +105,7 @@
   "resolved" "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.21.tgz"
   "version" "1.0.0-next.21"
 
-"@popperjs/core@^2.11.6", "@popperjs/core@^2.11.8":
+"@popperjs/core@^2.11.6", "@popperjs/core@^2.11.8", "@popperjs/core@^2.9.2":
   "integrity" "sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A=="
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
   "version" "2.11.8"
@@ -197,6 +197,13 @@
     "magic-string" "^0.30.0"
     "svelte-hmr" "^0.15.2"
     "vitefu" "^0.2.4"
+
+"@types/bootstrap@^5.2.6":
+  "integrity" "sha512-BlAc3YATdasbHoxMoBWODrSF6qwQO/E9X8wVxCCSa6rWjnaZfpkr2N6pUMCY6jj2+wf0muUtLySbvU9etX6YqA=="
+  "resolved" "https://registry.npmjs.org/@types/bootstrap/-/bootstrap-5.2.6.tgz"
+  "version" "5.2.6"
+  dependencies:
+    "@popperjs/core" "^2.9.2"
 
 "@types/cookie@^0.5.1":
   "integrity" "sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g=="
