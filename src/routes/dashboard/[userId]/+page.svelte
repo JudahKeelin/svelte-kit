@@ -24,6 +24,14 @@
         return json;
     };
 
+    function getCurrent() {
+        for (let i = 0; i < updates.length; i++) {
+            if (updates[i].userId === userId) {
+                return updates[i];
+            }
+        }
+    }
+
 
     let names:any = [];
     let occupancy:any = [];
@@ -34,7 +42,7 @@
     onMount(async () => {
         updates = await getUpdates();
 
-        current = updates[0];
+        current = getCurrent();
 
         for (let i = 0; i < updates.length; i++) {
             if (names.find((name:any) => name === updates[i].complexName) === undefined) {
