@@ -26,7 +26,7 @@
     let singleBed:any;
     let doubleBed:any;
     let tripleBed:any;
-    let date = moment().startOf('day').format('YYYY-MM-D');
+    let date = moment().startOf('day').format('YYYY-MM-DD');
     let result = '';
 
     async function handleUpdate () {
@@ -59,16 +59,18 @@
 			})
 		})
 		
-		const json = await res.json()
-		result = JSON.stringify(json)
-        console.log(result)
-
+        const json = await res;
+    
         occupancy = null;
         prospects = null;
         sales = null;
         singleBed = null;
         doubleBed = null;
         tripleBed = null;
+
+        setTimeout(() => {
+            window.location.href = "/dashboard/" + userId;
+        }, 1000);
 	}
 
 </script>
