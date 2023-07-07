@@ -134,8 +134,9 @@
 <div class="container-fluid text-center mainBody">
     <h2>Create New User</h2>
     <form on:submit|preventDefault={handleSubmit}>
-        <div class="row">
 
+
+        <div class="row">
             <div class="col-3"></div>
 
             <div class="col-3">
@@ -143,36 +144,56 @@
                     <label for="inputFirstName" class="form-label">First Name</label>
                     <input type="FirstName" class="form-control" id="FirstName" bind:value={firstName}>            
                 </div>
-                <div class="mb-3">
-                    <label for="inputComplexName" class="form-label">Apartment Complex Name</label>
-                    <input type="ComplexName" class="form-control" id="ComplexName" bind:value={complexName}>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="inputPhone" class="form-label">Phone Number</label>
-                    <input type="Phone" class="form-control" id="Phone" bind:value={phone}>
-                </div>
             </div>
-
             <div class="col-3">
                 <div class="mb-3">
                     <label for="inputLastName" class="form-label">Last Name</label>
                     <input type="LastName" class="form-control" id="LastName" bind:value={lastName}>            
                 </div>
+            </div>
+
+            <div class="col-3"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-3"></div>
+
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="inputComplexName" class="form-label">Apartment Complex Name</label>
+                    <input type="ComplexName" class="form-control" id="ComplexName" bind:value={complexName}>
+                </div>
+            </div>
+            <div class="col-3">
                 <div class="mb-3">
                     <label for="inputEmail" class="form-label">Email</label>
                     <input type="Email" class="form-control" id="Email" bind:value={email}>
                 </div>
+            </div>
+
+            <div class="col-3"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-3"></div>
+
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="inputPhone" class="form-label">Phone Number</label>
+                    <input type="Phone" class="form-control" id="Phone" bind:value={phone}>
+                </div>
+            </div>
+            <div class="col-3">
                 <div class="mb-3">
                     <label for="inputAddress" class="form-label">Address</label>
                     <input type="Address" class="form-control" id="Address" bind:value={address}>
                 </div>
             </div>
-            <div class="col-3">
 
-            </div>
+            <div class="col-3"></div>
         </div>
-
 
 
         <div class="row">
