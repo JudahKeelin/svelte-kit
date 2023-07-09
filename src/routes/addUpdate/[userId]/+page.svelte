@@ -82,7 +82,7 @@
     }
     .mainBody {
         background-image: url("http://iheartbackgrounds.weebly.com/uploads/1/7/4/2/17420453/3108862_orig.jpg");
-        height: 100%;
+        height: 100vh;
         -webkit-text-fill-color: aliceblue;
     }
 
@@ -93,6 +93,15 @@
     .main-logo {
         width: 5rem;
         height: auto;
+    }
+
+    .h3 {
+        margin-top: 14vh;
+        margin-bottom: 5vh;
+    }
+
+    .spacer {
+        font-size: 1px;
     }
 </style>
 
@@ -117,51 +126,121 @@
 </nav>
 
 <div class="container-fluid text-center mainBody">
-    <div class="row text-center">
-        <div class="col-4">
-            {#await getName()}
-                <p>...loading</p>
-            {:catch error}
-                <p style="color: red">{error.message}</p>
-            {/await}
-        </div>
-        <div class="col-4">
-            <h3>Weekly Update Form</h3>
-            <form on:submit|preventDefault={handleUpdate}>
+    {#await getName()}
+        <p>...loading</p>
+    {:catch error}
+        <p style="color: red">{error.message}</p>
+    {/await}
+
+    <div class="row spacer">
+        <p>l</p>
+    </div>
+
+    <div class="div h3">
+        <h3>Weekly Update Form</h3>
+    </div>
+
+    
+
+    <form on:submit|preventDefault={handleUpdate}>
+
+
+
+        <div class="row">
+
+            <div class="col"></div>
+
+            <div class="col-3">
+
                 <div class="mb-3">
                     <label for="inputOccupancy" class="form-label">Occupancy %</label>
                     <input type="Occupancy" class="form-control" id="Occupancy" bind:value={occupancy} aria-describedby="Occupancy">
                     <div id="OccupancyHelp" class="form-text">Current percentage of units occupied.</div>
                 </div>
+
+            </div>
+
+            <div class="col-3">
+
                 <div class="mb-3">
                     <label for="inputProspects" class="form-label">Prospects</label>
                     <input type="Prospects" class="form-control" id="Prospects" bind:value={prospects}>
                     <div id="ProspectsHelp" class="form-text">Number of prospective tenants in last 7 days.</div>
                 </div>
+
+            </div>
+
+            <div class="col-3">
+
                 <div class="mb-3">
                     <label for="inputSales" class="form-label">Sales</label>
                     <input type="Sales" class="form-control" id="Sales" bind:value={sales}>
                     <div id="SalesHelp" class="form-text">Number of sales in last 7 days.</div>
                 </div>
+
+            </div>
+
+            <div class="col"></div>
+
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col"></div>
+
+            <div class="col-3">
+
                 <div class="mb-3">
                     <label for="inputSingleBed" class="form-label">Single Bedroom Price</label>
                     <input type="SingleBed" class="form-control" id="SingleBed" bind:value={singleBed}>
                     <div id="SingleBedHelp" class="form-text"></div>
                 </div>
+
+            </div>
+
+            <div class="col-3">
+
                 <div class="mb-3">
                     <label for="inputDoubleBed" class="form-label">Two Bedroom Price</label>
                     <input type="DoubleBed" class="form-control" id="DoubleBed" bind:value={doubleBed}>
                     <div id="DoubleBedHelp" class="form-text"></div>
                 </div>
+
+            </div>
+
+            <div class="col-3">
+
                 <div class="mb-3">
                     <label for="inputTripleBed" class="form-label">Three Bedroom Price</label>
                     <input type="TripleBed" class="form-control" id="TripleBed" bind:value={tripleBed}>
                     <div id="TripleBedHelp" class="form-text"></div>
                 </div>
+
+            </div>
+
+            <div class="col"></div>
+
+        </div>
+
+        <div class="div tips">
+            <p>If you don't have any data for a given field, enter 0.</p>
+            <p>Please use whole numbers.</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col"></div>
+            <div class="col">
+
                 <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+
+            </div>
+            <div class="col"></div>
+
         </div>
-        <div class="col-4">
-        </div>
-    </div>
+
+    </form>
+   
 </div>

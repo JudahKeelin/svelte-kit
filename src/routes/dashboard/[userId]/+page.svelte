@@ -9,7 +9,8 @@
 
     console.log(date);
 
-    const userId = $page.params.userId;
+    let userId = $page.params.userId;
+    let numId = parseInt(userId);
 
     console.log(userId);
 
@@ -34,12 +35,18 @@
     onMount(async () => {
         updates = await getUpdates();
 
-        current = updates[0];
-
         for (let i = 0; i < updates.length; i++) {
             if (names.find((name:any) => name === updates[i].complexName) === undefined) {
                 names.push(updates[i].complexName);
                 occupancy.push(updates[i].occupancy);
+            }
+        }
+
+        for (let i = 0; i < updates.length; i++) {
+            if (updates[i].userId === numId) {
+                console.log(updates[i]);
+                current = updates[i];
+                break;
             }
         }
 
@@ -58,7 +65,9 @@
                     borderWidth: 1
                 }]
             },
-            });    
+            });
+
+            
         });
 
         
