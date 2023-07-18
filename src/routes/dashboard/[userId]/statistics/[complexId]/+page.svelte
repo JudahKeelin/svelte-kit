@@ -52,11 +52,11 @@
         }
 
         setTimeout(() => {
-            const ctx:any = document.getElementById('occupancyChart');
+            const ctx0:any = document.getElementById('occupancyChart');
 
-            console.log(ctx);
+            console.log(ctx0);
 
-            new Chart(ctx, {
+            new Chart(ctx0, {
             type: 'line',
             data: {
                 labels: dates,
@@ -66,9 +66,49 @@
                     borderWidth: 1
                 }]
             },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Occupancy Chart'
+                    }
+                }
+            }
             });
 
-            const ctx2:any = document.getElementById('prospectsChart');
+
+
+            const ctx1:any = document.getElementById('salesChart');
+
+            console.log(ctx1);
+
+            new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [
+                {
+                    label: 'Prospects',
+                    data: prospects,
+                    borderWidth: 1
+                },
+                {
+                    label: 'Sales',
+                    data: sales,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Prospects and Sales'
+                    }
+                }
+            }
+            });
+
+            const ctx2:any = document.getElementById('pricingChart');
 
             console.log(ctx2);
 
@@ -76,78 +116,32 @@
             type: 'line',
             data: {
                 labels: dates,
-                datasets: [{
-                    label: 'Prospects',
-                    data: prospects,
-                    borderWidth: 1
-                }]
-            },
-            });
-
-            const ctx3:any = document.getElementById('salesChart');
-
-            console.log(ctx3);
-
-            new Chart(ctx3, {
-            type: 'line',
-            data: {
-                labels: dates,
-                datasets: [{
-                    label: 'Sales',
-                    data: sales,
-                    borderWidth: 1
-                }]
-            },
-            });
-
-            const ctx4:any = document.getElementById('singleBedChart');
-
-            console.log(ctx4);
-
-            new Chart(ctx4, {
-            type: 'line',
-            data: {
-                labels: dates,
-                datasets: [{
-                    label: 'Single Bed Price',
+                datasets: [
+                {
+                    label: 'One Bed Price',
                     data: singleBed,
                     borderWidth: 1
-                }]
-            },
-            });
-
-            const ctx5:any = document.getElementById('doubleBedChart');
-
-            console.log(ctx5);
-
-            new Chart(ctx5, {
-            type: 'line',
-            data: {
-                labels: dates,
-                datasets: [{
-                    label: 'Double Bed Price',
+                },
+                {
+                    label: 'Two Bed Price',
                     data: doubleBed,
                     borderWidth: 1
-                }]
-            },
-            });
-
-            const ctx6:any = document.getElementById('tripleBedChart');
-
-            console.log(ctx6);
-
-            new Chart(ctx6, {
-            type: 'line',
-            data: {
-                labels: dates,
-                datasets: [{
-                    label: 'Triple Bed Price',
+                },
+                {
+                    label: 'Three Bed Price',
                     data: tripleBed,
                     borderWidth: 1
                 }]
             },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Pricing'
+                    }
+                }
+            }
             });
-            
         });
 
     });
@@ -158,7 +152,7 @@
 
     .mainBody {
             background-image: url("http://iheartbackgrounds.weebly.com/uploads/1/7/4/2/17420453/3108862_orig.jpg");
-            height: 100vh;
+            height: 100%;
             -webkit-text-fill-color: rgb(0, 0, 0);
     }
 
@@ -199,35 +193,32 @@
 <div class="container-fluid text-center mainBody">
 
     <div class="row">
+        <div class="col-2"></div>
 
-        <div class="col-4">
+        <div class="col-8">
             <canvas class="Chart" id="occupancyChart" width="400" height="200"></canvas>
         </div>
 
-        <div class="col-4">
-            <canvas class="Chart" id="prospectsChart" width="400" height="200"></canvas>
-        </div>
-
-        <div class="col-4">
-            <canvas class="Chart" id="salesChart" width="400" height="200"></canvas>
-        </div>
-
+        <div class="col-2"></div>
     </div>
 
     <div class="row">
+        <div class="col-2"></div>
 
-        <div class="col-4">
-            <canvas class="Chart" id="singleBedChart" width="400" height="200"></canvas>
-        </div>
-
-        <div class="col-4">
-            <canvas class="Chart" id="doubleBedChart" width="400" height="200"></canvas>
-        </div>
-
-        <div class="col-4">
-            <canvas class="Chart" id="tripleBedChart" width="400" height="200"></canvas>
+        <div class="col-8">
+            <canvas class="Chart" id="salesChart" width="400" height="200"></canvas>
         </div>
         
+        <div class="col-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+
+        <div class="col-8">
+            <canvas class="Chart" id="pricingChart" width="400" height="200"></canvas>
+        </div>
+        
+        <div class="col-2"></div>
     </div>
 
         
