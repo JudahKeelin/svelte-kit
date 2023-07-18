@@ -17,6 +17,7 @@
     let singleBed:any = [];
     let doubleBed:any = [];
     let tripleBed:any = [];
+    let complexName = '';
 
 
     const getUpdates = async () => {
@@ -39,6 +40,7 @@
         singleBed.push(0);
         doubleBed.push(0);
         tripleBed.push(0);
+        complexName = updates[0].complexName;
 
         for(let i = 0; i < updates.length; i++){
             console.log(updates[i]);
@@ -165,6 +167,15 @@
         background-color: black;
         margin-top: 5vh;
     }
+
+    .h2 {
+        margin-top: 3vh;
+        -webkit-text-fill-color: aliceblue;
+    }
+
+    .spacer {
+        font-size: 1px;
+    }
 </style>
 
 
@@ -191,6 +202,13 @@
 
 
 <div class="container-fluid text-center mainBody">
+    <div class="row spacer">
+        <p>l</p>
+    </div>
+
+    <div class="row h2">
+        <h2>{complexName}</h2>
+    </div>
 
     <div class="row">
         <div class="col-2"></div>
