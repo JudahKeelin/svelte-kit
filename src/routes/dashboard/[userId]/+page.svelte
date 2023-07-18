@@ -124,6 +124,10 @@
         border-radius: 10px;
     }
 
+    .btn-link {
+        padding: 8px;
+    }
+
 </style>
 
 
@@ -209,7 +213,7 @@
                             {#each updates as update (update.id)}
                                 <tr>
                                     <td>{update.date}</td>
-                                    <td>{update.complexName}</td>
+                                    <td><button type="button" class="btn btn-link" on:click={() => window.location.href = "/dashboard/" + userId + "/statistics/" + update.userId}>{update.complexName}</button></td>
                                     <td>{update.occupancy}%</td>
                                     <td>{update.prospects}</td>
                                     <td>{update.sales}</td>
