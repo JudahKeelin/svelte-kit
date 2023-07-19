@@ -158,39 +158,62 @@
     {#if updates.length > 0}
         <div class="row">
             <div class="col-3 current pt-2">
+
                 <div class="row sidebar">
                     <h3>Current Statistics</h3>
                 </div>
+
                 <div class="row sidebar">
                     <h4>Occupancy</h4>
                     <h5>{current.occupancy}%</h5>
                 </div>
+
                 <div class="row sidebar">
                     <h4>Prospects</h4>
                     <h5>{current.prospects}</h5>
                 </div>
+
                 <div class="row sidebar">
                     <h4>Sales</h4>
                     <h5>{current.sales}</h5>
                 </div>
+
                 <div class="row sidebar">
                     <h4>One Bedroom Price</h4>
                     <h5>${current.oneBedPrice}.00</h5>
                 </div>
+
                 <div class="row sidebar">
                     <h4>Two Bedroom Price</h4>
                     <h5>${current.twoBedPrice}.00</h5>
                 </div>
+
                 <div class="row sidebar">
                     <h4>Three Bedroom Price</h4>
                     <h5>${current.threeBedPrice}.00</h5>
                 </div>
+
                 <div class="row sidebar"></div>
-                <div class="row sidebar">
-                    <button class="btn btn-secondary" on:click={() => window.location.href = "/addUpdate/" + userId}>Add Update</button>
+                
+                <div class="row">
+                    <button class="btn btn-secondary" 
+                        style="
+                            btn-border-radius: 10px;
+                            btn-border-color: aliceblue;
+                            btn-border-style: solid;
+                            btn-border-width: 1px;
+                            background-color: rgba(100,100,100, 0.5);
+                        " 
+                        on:click={() => window.location.href = "/addUpdate/" + userId}>Add Update
+                    </button>
                 </div>
 
             </div>
+
+
+
+            
+
             <div class="col-8">
 
                 <canvas class="mainChart" id="myChart" width="400" height="200"></canvas>
