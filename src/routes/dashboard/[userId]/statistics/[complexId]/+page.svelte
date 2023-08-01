@@ -159,7 +159,7 @@
     }
 
     .main-logo {
-            width: 5rem;
+            width: 8rem;
             height: auto;
     }
 
