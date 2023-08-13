@@ -48,6 +48,11 @@
         width: 8rem;
         height: auto;
     }
+
+    button {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 </style>
 
 <nav class="navbar bg-body-tertiary">
@@ -88,11 +93,14 @@
         </div>
         <div class="row">
             <div class="col"></div>
-            <div class="col-1 align-content-end">
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col-1">
+                <button type="submit" class="btn btn-primary">Login</button>
             </div>
-            <div class="col-1 align-content-start">
+            <div class="col-1">
                 <button class="btn btn-secondary" on:click={() => window.location.href = "/newUser"}>New</button>
+            </div>
+            <div class="col-1">
+                <button class="btn btn-info" on:click={() => window.location.href = "/dashboard/9436991"}>Demo</button>
             </div>
             <div class="col"></div>
         </div>
