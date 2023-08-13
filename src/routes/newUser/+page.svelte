@@ -124,7 +124,7 @@
                 <img src={logo} class="image-fluid main-logo" alt="">
             </div>
             <div class="col-6 RobotoMedium">
-                <h1>THE MULTI-FAMILY MARKET</h1>
+                <h1>Simple Complex</h1>
             </div>
             <div class="col-5"></div>
     </div>
