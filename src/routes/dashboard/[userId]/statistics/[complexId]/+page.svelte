@@ -8,6 +8,8 @@
     let complexId = $page.params.complexId;
     let userId = $page.params.userId;
 
+    
+
 
     let updates:any = [];
     let dates:any = [];
@@ -58,6 +60,9 @@
 
             console.log(ctx0);
 
+            Chart.defaults.color = '#fff';
+            Chart.defaults.borderColor = '#56595D';
+
             new Chart(ctx0, {
             type: 'line',
             data: {
@@ -78,7 +83,7 @@
             }
             });
 
-
+            
 
             const ctx1:any = document.getElementById('salesChart');
 
@@ -164,7 +169,6 @@
     }
 
     .Chart {
-        background-color: black;
         margin-top: 5vh;
     }
 
@@ -180,7 +184,7 @@
 
 
 
-<nav class="navbar bg-body-tertiary">
+<nav class="navbar sticky-top bg-body-tertiary">
     <div class="container-fluid">
        
             <div class="col-1">
