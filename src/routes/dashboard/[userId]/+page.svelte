@@ -121,6 +121,10 @@
     li {
         list-style-type: none;
     }
+
+    canvas {
+        background: rgba(32, 32, 32, 0.5);
+    }
 </style>
 
 

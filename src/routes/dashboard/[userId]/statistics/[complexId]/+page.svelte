@@ -70,7 +70,7 @@
                 datasets: [{
                     label: 'Occupancy %',
                     data: occupancy,
-                    borderWidth: 1
+                    borderWidth: 1,
                 }]
             },
             options: {
@@ -180,6 +180,11 @@
     .spacer {
         font-size: 1px;
     }
+
+    canvas {
+        background: rgba(32, 32, 32, 0.5);
+    }
+
 </style>
 
 
