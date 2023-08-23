@@ -33,6 +33,7 @@
     };
 
 
+    
     let chartData:{name: string, occupancy: number}[] = [];
     let names:any = [];
     let current:any = [];
