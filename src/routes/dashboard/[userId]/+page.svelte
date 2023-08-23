@@ -33,8 +33,8 @@
     };
 
 
-    let names:{name: string, occupancy: []}[] = [];
-    let occupancy:any = [];
+    let chartData:{name: string, occupancy: number}[] = [];
+    let names:any = [];
     let current:any = [];
 
 
@@ -44,9 +44,11 @@
         for (let i = 0; i < updates.length; i++) {
             if (names.find((name:any) => name === updates[i].complexName) === undefined) {
                 names.push(updates[i].complexName);
-                occupancy.push(updates[i].occupancy);
+                chartData.push({name: updates[i].complexName, occupancy: updates[i].occupancy});
             }
         }
+
+        chartData.sort((a,b) => (a.name < b.name) ? -1 : 1);
 
         for (let i = 0; i < updates.length; i++) {
             if (updates[i].userId === numId) {
@@ -67,11 +69,11 @@
             new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: names,
+                labels: chartData.map((data) => data.name),
                 datasets: [
                     {
                         label: 'Occupancy %',
-                        data: occupancy,
+                        data: chartData.map((data) => data.occupancy),
                         borderWidth: 1
                     }
                 ]
@@ -101,7 +103,7 @@
     }
 
     .main-logo {
-        width: 8rem;
+        width: 100%;
         height: auto;
     }
 
@@ -125,20 +127,26 @@
     canvas {
         background: rgba(32, 32, 32, 0.5);
     }
+
 </style>
 
 
 <nav class="navbar sticky-top bg-body-tertiary">
+
     <div class="container-fluid">
        
             <div class="col-1">
                 <img src={logo} class="image-fluid main-logo" alt="">
             </div>
+
             <div class="col-7 RobotoMedium">
                 <h1>Simple Complex</h1>
             </div>
+
             <div class="col-4"></div>
+
     </div>
+
 </nav>
 
 

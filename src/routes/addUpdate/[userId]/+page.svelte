@@ -91,7 +91,7 @@
     }
 
     .main-logo {
-        width: 8rem;
+        width: 100%;
         height: auto;
     }
 

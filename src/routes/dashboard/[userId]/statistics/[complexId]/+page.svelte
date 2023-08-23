@@ -158,14 +158,14 @@
 <style>
 
     .mainBody {
-            background-image: url("http://iheartbackgrounds.weebly.com/uploads/1/7/4/2/17420453/3108862_orig.jpg");
-            height: 100%;
-            -webkit-text-fill-color: rgb(0, 0, 0);
+        background-image: url("http://iheartbackgrounds.weebly.com/uploads/1/7/4/2/17420453/3108862_orig.jpg");
+        height: 100%;
+        -webkit-text-fill-color: rgb(0, 0, 0);
     }
 
     .main-logo {
-            width: 8rem;
-            height: auto;
+        width: 100%;
+        height: auto;
     }
 
     .Chart {
