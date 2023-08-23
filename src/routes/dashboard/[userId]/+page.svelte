@@ -128,6 +128,18 @@
         background: rgba(32, 32, 32, 0.5);
     }
 
+    .sidebar {
+        position: fixed;
+        height: 100vh
+    }
+
+    @media (max-width: 780px) {
+        .sidebar {
+            position: relative;
+            height: auto;
+        }
+    }
+
 </style>
 
 
@@ -152,7 +164,7 @@
 
 <div class="container-fluid main" data-bs-theme="dark">
     <div class="row">
-        <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary" style="position: fixed; height: 100vh">
+        <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
             <div class="sidebar-body offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
                 <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                     <ul class="flex-column mb-auto">
